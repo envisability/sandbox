@@ -1,0 +1,91 @@
+/* Border box declaration
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* inherit border-box on all elements in the universe and before and after
+ */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  h1{
+    margin-top: 5rem;
+  }
+}
+
+.navigation{
+  background: lightgray;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  margin: 0;
+  a{
+    display: block;
+    padding: 1em;
+    color: black;
+  }
+  a:hover{
+    color: gray;
+    background-color: antiquewhite;
+  }
+  .brand{
+    padding: 0;
+    img{
+      width:75px;
+    }
+  }
+}
+
+// Gallery
+ul{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  li{
+    list-style: none;
+    padding: 1rem;
+    margin:auto;
+    img{
+      width: 100%;
+      height: auto;
+      max-width: 576px;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 768px){
+  .navigation{
+    flex-flow: row wrap;
+    justify-content: center;
+    .brand{
+      order: 5;
+    }
+    .low-order{
+      order: 1;
+    }
+    .high-order{
+      order: 5;
+    }
+  }
+  // Gallery
+  ul{
+    flex-flow: row wrap;
+    max-height: 40vh;
+    li{
+      flex-grow: 1;
+      flex-basis: 33%;
+    }
+    li.twice{
+      flex-grow: 2;
+    }
+  }
+}
