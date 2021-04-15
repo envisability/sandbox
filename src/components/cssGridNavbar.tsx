@@ -1,29 +1,24 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../logo.svg";
 
-function Navbar(props) {
+function CssGridNavbar(props) {
     const links = [
         {
             key: 1,
-            name:"portfolio",
-            to: "/portfolio",
+            name:"layout-1",
+            to: "/grid-layout-1",
         },
         {
             key: 2,
-            name:"blog",
-            to: "/blog",
+            name:"layout-2",
+            to: "/grid-layout-2",
         },
         {
             key: 3,
-            name:"css-grid",
-            to: "/css-grid",
-        },
-        {
-            key: 4,
-            name:"contact",
-            to: "/contact",
-        },
+            name:"layout-3",
+            to: "/grid-layout-3",
+        }
 
     ];
     return(
@@ -44,4 +39,4 @@ function Navbar(props) {
     );
 }
 
-export default Navbar;
+export default CssGridNavbar;

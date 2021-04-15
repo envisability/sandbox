@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Company(props) {
+function CssGrid(props) {
     return (
        <section>
            <h1>Company</h1>
@@ -8,4 +8,4 @@ function Company(props) {
     );
 }
 
-export default Company;
+export default CssGrid;
